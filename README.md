@@ -27,9 +27,12 @@ Orginal Lap Work:
 > summary(cl_data)
         Bronx     Manhattan Staten Island      Brooklyn        Queens 
          4880          5250          1891         12416         10923 
+````
 > prop.table(summary(cl_data))
         Bronx     Manhattan Staten Island      Brooklyn        Queens 
    0.13800905    0.14847285    0.05347851    0.35113122    0.30890837 
+
+````
 > summary(train_data)
   norm_inc_tot     norm_housing_cost
  Min.   :0.00000   Min.   :0.00000  
@@ -38,7 +41,8 @@ Orginal Lap Work:
  Mean   :0.04265   Mean   :0.58972  
  3rd Qu.:0.05219   3rd Qu.:0.97784  
  Max.   :1.00000   Max.   :1.00000
- ````
+
+````
  KNN Results where our interval for K is between {1,9} where K is every odd number 
  
  ````
