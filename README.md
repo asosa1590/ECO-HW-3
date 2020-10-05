@@ -94,3 +94,9 @@ We then expanded our K value to increase to 15
 [1] 15.0000000  0.3808867
 
 `````
+Lastly for the expierement we increased our value to 99, based on the previous results it seems that there is a positive correlation between 
+an increase in K or nearest neighbors and a positive success rate of our algorthim guessing the correct borough relative to housing cost, total income and rent.
+
+````
+
+
