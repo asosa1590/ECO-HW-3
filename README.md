@@ -45,8 +45,7 @@ Orginal Lap Work:
 ````
  KNN Results where our interval for K is between {1,9} where K is every odd number 
  
- ````
- > for (indx in seq(1, 9, by= 2)) {
+ ````> for (indx in seq(1, 9, by= 2)) {
 +     pred_borough <- knn(train_data, test_data, cl_data, k = indx, l = 0, prob = FALSE, use.all = TRUE)
 +     num_correct_labels <- sum(pred_borough == true_data)
 +     correct_rate <- num_correct_labels/length(true_data)
@@ -61,8 +60,7 @@ Orginal Lap Work:
 ````
  We replicated the experiment again with a new seed and new set of values our results were the following
  
- ````
-> for (indx in seq(1, 9, by= 2)) {
+ ````> for (indx in seq(1, 9, by= 2)) {
 +     pred_borough <- knn(train_data, test_data, cl_data, k = indx, l = 0, prob = FALSE, use.all = TRUE)
 +     num_correct_labels <- sum(pred_borough == true_data)
 +     correct_rate <- num_correct_labels/length(true_data)
