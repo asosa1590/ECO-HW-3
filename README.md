@@ -155,3 +155,7 @@ an increase in K or nearest neighbors and a positive success rate of our algorth
 [1] 97.0000000  0.3953595
 [1] 99.0000000  0.3971973
 
+```Our Correct rate was the following:
+
+> mean(correct_rate)
+[1] 0.3971973
