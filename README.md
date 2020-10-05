@@ -2,7 +2,7 @@
 Homework 3:
 
 Orginal Lap Work:
-
+```
 > borough_f <- factor((in_Bronx + 2*in_Manhattan + 3*in_StatenI + 4*in_Brooklyn + 5*in_Queens), levels=c(1,2,3,4,5),labels = c("Bronx","Manhattan","Staten Island","Brooklyn","Queens"))
 > norm_varb <- function(X_in) {
 +     (X_in - min(X_in, na.rm = TRUE))/( max(X_in, na.rm = TRUE) - min(X_in, na.rm = TRUE) )
@@ -22,6 +22,8 @@ Orginal Lap Work:
 > test_data <- subset(dat_use,(!select1))
 > cl_data <- y_use[select1]
 > true_data <- y_use[!select1]
+
+`````
 > summary(cl_data)
         Bronx     Manhattan Staten Island      Brooklyn        Queens 
          4880          5250          1891         12416         10923 
@@ -56,8 +58,7 @@ Orginal Lap Work:
  We replicated the experiment again with a new seed and new set of values our results were the following
  
  ````
- 
-  for (indx in seq(1, 9, by= 2)) {
+> for (indx in seq(1, 9, by= 2)) {
 +     pred_borough <- knn(train_data, test_data, cl_data, k = indx, l = 0, prob = FALSE, use.all = TRUE)
 +     num_correct_labels <- sum(pred_borough == true_data)
 +     correct_rate <- num_correct_labels/length(true_data)
