@@ -51,7 +51,7 @@ Orginal Lap Work:
 +     num_correct_labels <- sum(pred_borough == true_data)
 +     correct_rate <- num_correct_labels/length(true_data)
 +     print(c(indx,correct_rate))
-+ }
++ 
 [1] 1.0000000 0.3540087
 [1] 3.0000000 0.3437859
 [1] 5.0000000 0.3550425
@@ -67,7 +67,7 @@ Orginal Lap Work:
 +     num_correct_labels <- sum(pred_borough == true_data)
 +     correct_rate <- num_correct_labels/length(true_data)
 +     print(c(indx,correct_rate))
-+ }
++ 
 [1] 1.0000000 0.3494142
 [1] 3.0000000 0.3452791
 [1] 5.0000000 0.3560763
