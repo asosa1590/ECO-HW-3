@@ -158,9 +158,9 @@ an increase in K or nearest neighbors and a positive success rate of our algorth
 ```Our Correct rate was the following:
 
 > mean(correct_rate)
-[1] 0.3971973
+[1] 0.395153026
 
 > summary(correct_rate)
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.3972  0.3972  0.3972  0.3972  0.3972  0.3972
+ 0.34  0.3972  0.3972  0.3951  0.3961  0.4873
 
