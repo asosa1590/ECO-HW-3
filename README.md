@@ -165,7 +165,7 @@ an increase in K or nearest neighbors and a positive success rate of our algorth
  0.34  0.3972  0.3972  0.3951  0.3961  0.48735
  ````
 For our own expieriment, in order to try and create a KNN alogorithm that could help determine one's particular borough we decided to use age and room size as a factor, the idea being that one's age and living space could be a helpful indicator in location.  A younger individual with a smaller room size, might be in
- the start of their career as a result they would have a higher propensity to be living in the outer boroughs (areas with lower median rental costs)  in order to find more   more affordable housing options  relative to an older person who has more expierence in their career and would have more disposable cash available for the extra space in a higher cost of living area. 
+ the start of their career as a result they would have a higher propensity to be living in the outer boroughs (areas with lower median rental costs)  in order to find more   more affordable housing options  relative to an older person who has more expierence in their career and would have more disposable cash available for the extra space in a higher cost of living borough
  
  ````
  
