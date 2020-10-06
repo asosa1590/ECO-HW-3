@@ -1,7 +1,7 @@
 # ECO-HW-3
 Homework 3:
 
-Orginal Lap Work:
+Orginal Lab Work:
 ```
 > borough_f <- factor((in_Bronx + 2*in_Manhattan + 3*in_StatenI + 4*in_Brooklyn + 5*in_Queens), levels=c(1,2,3,4,5),labels = c("Bronx","Manhattan","Staten Island","Brooklyn","Queens"))
 > norm_varb <- function(X_in) {
@@ -94,7 +94,7 @@ We then expanded our K value to increase to 15
 [1] 15.0000000  0.3808867
 
 `````
-Lastly for the expierement we increased our value to 99, based on the previous results it seems that there is a positive correlation between 
+Lastly for the experiment we increased our value to 99, based on the previous results it seems that there is a positive correlation between 
 an increase in K or nearest neighbors and a positive success rate of our algorthim guessing the correct borough relative to housing cost, total income and rent.
 
 ````
@@ -166,8 +166,8 @@ an increase in K or nearest neighbors and a positive success rate of our algorth
  ````
  Group Experiment
  
-For our own expieriment, in order to try and create a KNN alogorithm that could help determine one's particular borough we decided to use age and room size as a factor, the idea being that one's age and living space could be a helpful indicator in location.  A younger individual with a smaller room size, might be in
- the start of their career as a result they would have a higher propensity to be living in the outer boroughs (areas with lower median rental costs)  in order to find more   more affordable housing options  relative to an older person who has more expierence in their career and would have more disposable cash available for the extra space in a higher cost of living borough
+For our own experiment, in order to try and create a KNN alogorithm that could help determine one's particular borough we decided to use age and room size as a factor, the idea being that one's age and living space could be a helpful indicator in location.  A younger individual with a smaller room size, might be in
+ the start of their career as a result they would have a higher propensity to be living in the outer boroughs (areas with lower median rental costs)  in order to find more   more affordable housing options. An older person on the other hand,  who has more experience in their career and would have more disposable cash available would be able to afford more room space.
  
  ````
  Code:
@@ -325,5 +325,5 @@ for (indx in seq(1, 99, by= 2)) {
 [1] 99.0000000  0.3769814
 
 `````
-Our KNN Algorithim using Age and Room Size had a about a 37 perecent success rate of determining the location of the respondent's borough and the rate of our outcomes  were consistent  when we set up our Nearest Neighbor Values from 9, 21 and 100. The KNN Algorithim that looked at only income,  housing cost and rent became more reliable the more Nearest Neighbors we introduced in program. Overall, Income ahd Housing Cost are not the only reliable predictors for location, other factors such as age and room size could provide a more consistent and reliable way of determning location. 
+Our KNN Algorithim using Age and Room Size had a about a 37 perecent success rate of determining the location of the respondent's borough and the rate of our outcomes  were consistent  when we set up our Nearest Neighbor Values from 9, 21 and 100. The Original KNN Algorithim that looked at only income,  housing cost and rent became more reliable the more Nearest Neighbors we introduced in program. Overall, Income ahd Housing Cost are not the only reliable predictors for location, other factors such as age and room size could provide a more consistent and more reliable way of determning location.
 
