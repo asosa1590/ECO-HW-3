@@ -2,7 +2,12 @@
 Homework 3:
 
 Orginal Lab Work:
+
 ```
+
+> load("/cloud/project/acs2017_ny_data.RData")
+> dat_NYC <- subset(acs2017_ny, (acs2017_ny$in_NYC == 1)&(acs2017_ny$AGE > 20) & (acs2017_ny$AGE < 66))
+> attach(dat_NYC)
 > borough_f <- factor((in_Bronx + 2*in_Manhattan + 3*in_StatenI + 4*in_Brooklyn + 5*in_Queens), levels=c(1,2,3,4,5),labels = c("Bronx","Manhattan","Staten Island","Brooklyn","Queens"))
 > norm_varb <- function(X_in) {
 +     (X_in - min(X_in, na.rm = TRUE))/( max(X_in, na.rm = TRUE) - min(X_in, na.rm = TRUE) )
