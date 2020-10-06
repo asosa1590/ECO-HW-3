@@ -265,6 +265,8 @@ KNN Code Algorithim for 21 Nearest Neighbors
 ````
 
 KNN Code for 100 Nearest Neighbors 
+```
+
 for (indx in seq(1, 99, by= 2)) {
 +     pred_borough <- knn(train_data, test_data, cl_data, k = indx, l = 0, prob = FALSE, use.all = TRUE)
 +     num_correct_labels <- sum(pred_borough == true_data)
