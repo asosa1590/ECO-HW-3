@@ -28,19 +28,16 @@ Orginal Lab Work:
 > cl_data <- y_use[select1]
 > true_data <- y_use[!select1]
 
-`````
-> summary(cl_data)
+`````> summary(cl_data)
 
         Bronx     Manhattan Staten Island      Brooklyn        Queens 
          4880          5250          1891         12416         10923 
          
-````
-> prop.table(summary(cl_data))
+````> prop.table(summary(cl_data))
         Bronx     Manhattan Staten Island      Brooklyn        Queens 
    0.13800905    0.14847285    0.05347851    0.35113122    0.30890837 
 
-````
-> summary(train_data)
+````> summary(train_data)
   norm_inc_tot     norm_housing_cost
  Min.   :0.00000   Min.   :0.00000  
  1st Qu.:0.01191   1st Qu.:0.02493  
