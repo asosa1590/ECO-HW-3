@@ -164,10 +164,81 @@ an increase in K or nearest neighbors and a positive success rate of our algorth
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
  0.34  0.3972  0.3972  0.3951  0.3961  0.48735
  ````
+ Group Experiment
+ 
 For our own expieriment, in order to try and create a KNN alogorithm that could help determine one's particular borough we decided to use age and room size as a factor, the idea being that one's age and living space could be a helpful indicator in location.  A younger individual with a smaller room size, might be in
  the start of their career as a result they would have a higher propensity to be living in the outer boroughs (areas with lower median rental costs)  in order to find more   more affordable housing options  relative to an older person who has more expierence in their career and would have more disposable cash available for the extra space in a higher cost of living borough
  
  ````
+ Code:
+> dat_NYC <- subset(acs2017_ny, (acs2017_ny$in_NYC == 1)&(acs2017_ny$AGE > 20) & (acs2017_ny$AGE < 66))
+> attach(dat_NYC)
+> borough_f <- factor((in_Bronx + 2*in_Manhattan + 3*in_StatenI + 4*in_Brooklyn + 5*in_Queens), levels=c(1,2,3,4,5),labels = c("Bronx","Manhattan","Staten Island","Brooklyn","Queens"))
+> 
+> norm_varb <- function(X_in) {
++     (X_in - min(X_in, na.rm = TRUE))/( max(X_in, na.rm = TRUE) - min(X_in, na.rm = TRUE) )
++ }
  
+ ````
+ * Our two main variables were Age and ROOM space which we designated as Respondent_Age = Age 
+ and Living_Space = ROOMS
  
- 
+ ````
+> Respondent_Age <- AGE
+> Living_Space <- ROOMS
+````
+We normalized normalized respondents Age and Room Size
+
+> norm_varb(Respondent_Age)
+
+> norm_varb(Living_Space)
+
+````
+> data_use_prelim <- data.frame (Living_Space, Respondent_Age)
+> good_obs_data_use <- complete.cases(data_use_prelim,borough_f)
+> dat_use <- subset(data_use_prelim,good_obs_data_use)
+> y_use <- subset(borough_f,good_obs_data_use)
+> set.seed(12345)
+> NN_obs <- sum(good_obs_data_use == 1)
+> select1 <- (runif(NN_obs) < 0.8)
+> train_data <- subset(dat_use,select1)
+> test_data <- subset(dat_use,(!select1))
+> cl_data <- y_use[select1
++ ]
+> true_data <- y_use[!select1]
+
+````
+
+> summary(cl_data)
+        Bronx     Manhattan Staten Island      Brooklyn 
+         4880          5250          1891         12416 
+       Queens 
+        10923 
+> prop.table(summary(cl_data))
+        Bronx     Manhattan Staten Island      Brooklyn 
+   0.13800905    0.14847285    0.05347851    0.35113122 
+       Queens 
+   0.30890837 
+> summary(train_data)
+  Living_Space    Respondent_Age 
+ Min.   : 0.000   Min.   :21.00  
+ 1st Qu.: 3.000   1st Qu.:30.00  
+ Median : 4.000   Median :41.00  
+ Mean   : 4.762   Mean   :41.96  
+ 3rd Qu.: 6.000   3rd Qu.:53.00  
+ Max.   :16.000   Max.   :65.00  
+```
+KNN Code Algorithim
+> for (indx in seq(1, 9, by= 2)) {
++     pred_borough <- knn(train_data, test_data, cl_data, k = indx, l = 0, prob = FALSE, use.all = TRUE)
++     num_correct_labels <- sum(pred_borough == true_data)
++     correct_rate <- num_correct_labels/length(true_data)
++     print(c(indx,correct_rate))
++ }
+[1] 1.0000000 0.3742247
+[1] 3.0000000 0.3737652
+[1] 5.0000000 0.3777854
+[1] 7.0000000 0.3764071
+[1] 9.0000000 0.3757179
+
+`````
