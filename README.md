@@ -325,4 +325,5 @@ for (indx in seq(1, 99, by= 2)) {
 [1] 99.0000000  0.3769814
 
 `````
+Our KNN Algorithim using Age and Room Size had a about a 37 perecent success rate of determining the location of the respondent's borough and the rate of our outcomes  were consistent  when we set up our Nearest Neighbor Values from 9, 21 and 100. The KNN Algorithim that looked at only income,  housing cost and rent became more reliable the more Nearest Neighbors we introduced in program. Overall, Income ahd Housing Cost are not the only reliable predictors for location, other factors such as age and room size could provide a more consistent and reliable way of determning location. 
 
