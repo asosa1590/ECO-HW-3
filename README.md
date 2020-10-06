@@ -25,8 +25,10 @@ Orginal Lab Work:
 
 `````
 > summary(cl_data)
+
         Bronx     Manhattan Staten Island      Brooklyn        Queens 
          4880          5250          1891         12416         10923 
+         
 ````
 > prop.table(summary(cl_data))
         Bronx     Manhattan Staten Island      Brooklyn        Queens 
