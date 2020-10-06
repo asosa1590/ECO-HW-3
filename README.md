@@ -207,8 +207,6 @@ We normalized normalized respondents Age and Room Size
 + ]
 > true_data <- y_use[!select1]
 
-````
-
 > summary(cl_data)
         Bronx     Manhattan Staten Island      Brooklyn 
          4880          5250          1891         12416 
